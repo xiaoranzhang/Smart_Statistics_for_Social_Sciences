@@ -58,6 +58,11 @@ def average(n):
 n= int(raw_input("请输入要计算的数据个数(n)："))    # 输入要计算的数据个数
 average(n)    # 调用第一个函数 average()
 
-
-#if __name__ == "__main__":
-    #pass
+if __name__ == "__main__":
+    # 调试
+    print_func_input_list=input_list(n)
+    print_func_list_sum=list_sum()
+    print_func_average=average(n)
+    print "input_list:", print_func_input_list
+    print "list_sum:", print_func_list_sum
+    print "average:", print_func_average
