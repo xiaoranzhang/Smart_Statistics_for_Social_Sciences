@@ -110,13 +110,13 @@ def correlation_coefficient_r(n):
     '''
     相关系数r= X与y对应标准差的乘积的平均
     '''
-	inner_brackets_r = 0
-	for x in x_result_func_standard_score:
-		for y in y_result_func_standard_score:
-			inner_brackets_r = inner_brackets + (x * y)
-	r = inner_brackets_r / (n - 1)
-	print "相关性系数r：", r
-	return r
+    inner_brackets_r = 0
+    for x in x_result_func_standard_score:
+    	for y in y_result_func_standard_score:
+    		inner_brackets_r = inner_brackets + (x * y)
+    r = inner_brackets_r / (n - 1)
+    print "相关性系数r：", r
+    return r
 
 
 #=============================================================================================
