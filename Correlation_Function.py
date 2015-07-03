@@ -107,9 +107,9 @@ y_result_func_standard_score = standard_score()
 
 # 相关系数r的函数：
 def correlation_coefficient_r(n):
-'''
-相关系数r= X与y对应标准差的乘积的平均
-'''
+    '''
+    相关系数r= X与y对应标准差的乘积的平均
+    '''
 	inner_brackets_r = 0
 	for x in x_result_func_standard_score:
 		for y in y_result_func_standard_score:
