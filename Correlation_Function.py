@@ -9,11 +9,11 @@ import math
 def input_data_list(n):
     '''
     这个函数用于生成输入的数据的数组
-    每输入一个数据，就加入数组input_data[]中
+    每输入一个数据，就加入数组data_list[]中
     '''
     data_list = []
     for i in range(0,n):
-        input_data = int(raw_input("请输入数据："))
+        input_data = float(raw_input("请输入数据："))
         data_list.append(input_data)
         #input_data.append(i_n)
     #print 'input_data:', input_data
