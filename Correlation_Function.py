@@ -2,6 +2,7 @@
 # _*_ coding:utf-8 _*_
 
 import math
+import matplotlib
 
 
 #============================================================================================
@@ -113,11 +114,10 @@ def correlation_coefficient_r(n):
     inner_brackets_r = 0
     for x in x_result_func_standard_score:
     	for y in y_result_func_standard_score:
-    		inner_brackets_r = inner_brackets + (x * y)
+    		inner_brackets_r = inner_brackets_r + (x * y)
     r = inner_brackets_r / (n - 1)
     print "相关性系数r：", r
     return r
-
 
 #=============================================================================================
 
@@ -125,16 +125,32 @@ def correlation_coefficient_r(n):
 # 程序入口 2：
 
 correlation_coefficient_r(n)
+r_means = correlation_coefficient_r(n)
 
 # 这一部分可以添加对r值的判断代码。用判断语句来描述变量之间存在何种相关关系
+if abs(r_means) >=0.8 and abs(r_means) <=1:
+	print "两个变量之间呈现高度相关关系"
+elif abs(r_means) >=0.5 and abs(r_means) <0.8:
+	print "两个变量之间呈现中度相关关系（显著相关）"
+elif abs(r_means) >=0.3 and abs(r_means) <0.5:
+	print "两个变量之间呈现低度相关关系"
+else:
+	print "两个变量之间呈现微相关关系（不相关，基本没有直线相关关系）"
 
+# 分隔符
+print "======================================================================="
+print "======================================================================="
 
 #对相关性系数r的统计学意义描述：
+print "* 相关性系数r的统计学意义描述："
 print "1, 正的r值显示变量之间存在正相关关系，负的r值显示变量之间存在负相关关系。"
 print "2, r值在-1和+1之间。r值越接近于0，则表示变量之间的相关关系越弱。"
 print "3, r检验只能描述两个变量之间的直线相关关系，不能描述两个变量之间的曲线相关关系。"
 print "4, 注意异常值。"
 
+# 分割符
+print "======================================================================="
+print "======================================================================="
 
 #=============================================================================================
 
@@ -146,6 +162,4 @@ print "4, 注意异常值。"
     #print "input_list:", print_func_input_list
     #print "list_sum:", print_func_list_sum
     #print "average:", print_func_average
-
- 
 
