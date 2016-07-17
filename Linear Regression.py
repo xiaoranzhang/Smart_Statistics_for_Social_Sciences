@@ -1,3 +1,4 @@
+# Thanks for @j2kun's contribution
 import numpy
 from numpy import array, transpose, dot
 from numpy.linalg import inv
